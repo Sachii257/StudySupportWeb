@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="page-content">
+    <h2>{{ title }} for {{ subject_display_name }}</h2>
+    <p class="breadcrumb">Department: {{ department_display_name }}</p>
+    
+    <div class="file-list">
+        {% if files %}
+            <ul>
+                {% for file in files %}
+                <li>
+                    <a href="{{ url_for('download_file', department_name=department_name, subject_name=subject_name, file_type=file_type, filename=file) }}">
+                        {{ file }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No files available for this section yet.</p>
+        {% endif %}
+    </div>
+    <a href="{{ url_for('show_subjects', department_name=department_name) }}" class="back-link">← Back to Subjects</a>
+</div>
+{% endblock %}

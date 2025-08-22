@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="page-content">
+    <h2>Select a Department</h2>
+    <div class="list-container">
+        {% for dept_key, dept_data in departments.items() %}
+        <div class="card">
+            <a href="{{ url_for('show_subjects', department_name=dept_key) }}">
+                <h3>{{ dept_data.display_name }}</h3>
+                <p>Click to view subjects</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
