@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request, send_from_directory, flash, redirect, url_for
 import os
 
@@ -49,7 +48,8 @@ departments_data = {
             },
             "es": {
                 "display_name": "Environment Studies",
-                "notes": []
+                "notes": ["ens1.pdf",
+                          "ens2,pdf"]
             }
         }
     }
@@ -127,5 +127,5 @@ def download_file(department_name, subject_name, file_type, filename):
 
 # --- Main execution point to run the application ---
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)
