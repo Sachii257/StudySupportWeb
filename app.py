@@ -20,7 +20,8 @@ departments_data = {
             "set": {
                 "display_name": "Software Engineering and Testing",
                 "notes": ["se(se and testing).pdf.pdf",
-                          "st(se and testing).pdf"] # Add your filenames here, e.g., "SET_Notes.pdf"
+                          "st(se and testing).pdf",
+                          "Ian Sommerville8th edition.pdf"] # Add your filenames here, e.g., "SET_Notes.pdf"
             },
             "cn": {
                 "display_name": "Computer Network",
